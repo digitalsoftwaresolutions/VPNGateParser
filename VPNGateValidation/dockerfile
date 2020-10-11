@@ -1,0 +1,9 @@
+FROM ubuntu:latest
+
+WORKDIR /home
+ENV profile "https://www.vpngate.net/common/openvpn_download.aspx?sid=1584874749501&tcp=1&host=219.100.37.71&port=443&hid=15094297&/vpngate_219.100.37.71_tcp_443.ovpn"
+RUN apt update && apt install -y openvpn wget
+
+COPY entrypoint.sh /home/entrypoint.sh
+RUN ["chmod", "+x", "/home/entrypoint.sh"]
+ENTRYPOINT ["/home/entrypoint.sh"]
