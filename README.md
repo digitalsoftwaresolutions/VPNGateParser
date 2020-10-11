@@ -1,4 +1,5 @@
 # VPNGateParser
 VPNGate page parser / extractor
 
-import Sql file, execute main.py :) 
+create a docker image "openvpncli" from VPNGateValidation  
+import Sql file to mysql, execute main.py :) 
